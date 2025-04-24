@@ -25,13 +25,13 @@ class TestLoopsFunctions:
     
     @pytest.mark.parametrize("text, expected", [
         ("Beautiful day", 1),
-        ("Queueing", 2),
+        ("Queueing", 3),
         ("Python", 0),
-        ("AeIoU", 1),
+        ("AeIoU", 3),
         ("", 0),
         ("YyY", 1),
         ("Hello world", 0),
-    ], ids=["normal", "double", "no_vowels", 
+    ], ids=["normal", "triple", "no_vowels", 
             "all_vowels", "empty", "only_y", "spaces"])
     def test_count_vowel_triplets(self, text, expected):
         assert count_vowel_triplets(text) == expected

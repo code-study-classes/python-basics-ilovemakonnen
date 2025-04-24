@@ -15,7 +15,9 @@ class TestStringsFunctions:
         ('C:/Users/example.txt', 'example'),
         ('../index.html', 'index'),
         ('/home/user/photo.jpg', 'photo'),
-        ('archive.tar.gz', 'archive') 
+        ('archive.tar.gz', 'archive') ,
+        ('file','file'),
+        ('.gitignore','.gitignore')
     ], ids=["windows_path", "relative_path", "unix_path", 
             "double_extension", "no_extension", "hidden_file"])
     def test_extract_file_name(self, path, expected):
@@ -60,7 +62,7 @@ class TestStringsFunctions:
         ('HeLLO', 2),
         ('rhythm', 1),
         ('AeIoU', 1), 
-        ('xyz', 0), 
+        ('zxc', 0), 
         ('', 0), 
     ], ids=["mixed_case", "all_upper", "only_y", 
             "all_vowels", "no_vowels", "empty"])
