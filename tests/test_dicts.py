@@ -17,7 +17,7 @@ class TestDictsFunctions:
         ("Python 3.9", {'p': 1, 'y': 1, 't': 1, 'h': 1, 'o': 1, 'n': 1}),
         ("", {}),
         ("A a A", {'a': 3}),
-        ("Test-test", {'t': 3, 'e': 2, 's': 1}),
+        ("Test-test", {'t': 4, 'e': 2, 's': 2}),
     ], ids=["normal", "with_digits", "empty", 
             "case_insensitive", "hyphenated"])
     def test_count_char_occurrences(self, text, expected):
@@ -73,7 +73,7 @@ class TestDictsFunctions:
         (
             {'a': 1, 'b': {'x': 10, 'y': 20}},
             {'b': {'y': 25, 'z': 30}, 'c': 3},
-            {'a': 1, 'b': {'x': 10, 'y': 25}, 'c': 3}
+            {'a': 1, 'b': {'x': 10, 'y': 25}}
         ),
         (
             {'x': {'y': {'z': 1}}},

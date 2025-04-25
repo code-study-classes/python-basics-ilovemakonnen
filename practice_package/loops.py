@@ -9,7 +9,9 @@ def count_vowel_triplets(text):
     text = text.lower()
     count = 0
     for i in range(len(text) - 2):
-        if text[i] in vowels and text[i+1] in vowels and text[i+2] in vowels:
+        if (text[i] in vowels and 
+            text[i + 1] in vowels and 
+            text[i + 2] in vowels):
             count += 1
     return count
 
